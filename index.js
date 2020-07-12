@@ -64,8 +64,8 @@ const questions = [
   "Please eneter your e-mail"
 ];
 
-const README = (answer) => {
-  `
+function generateReadME(answer) {
+  return `
 # ${answer.project}
 ${answer.description}
 
@@ -81,6 +81,7 @@ ${answer.description}
 
 ##instructions
 
+
 ##usage
 
 ##contribution
@@ -94,13 +95,17 @@ ${answer.description}
 ##email
 
 `;
-};
+}
+promptUser().then(function (answer) {
+  const readMe = generateReadME(answer);
+  return writeToFile(`${answer.project}` + ".md", readMe);
+});
 
 // function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {}
 
 // function to initialize program
-function init() {}
+// function init() {}
 
 // function call to initialize program
-init();
+// init();
