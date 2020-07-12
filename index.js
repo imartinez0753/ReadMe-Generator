@@ -74,7 +74,7 @@ ${answer.description}
 
 ## Table of Contents
 
-[Instruction]{#instructions}
+[Instruction](##instructions)
 [Usage](##usage)
 [contribution](##contribution)
 [test](##test)
