@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -82,19 +83,26 @@ ${answer.description}
 [${answer.email}](##email)
 
 ##instructions
+${answer.installation}
 
 
 ##usage
+${answer.usage}
 
 ##contribution
+${answer.contribution}
 
 ##test
+${answer.test}
 
 ##license
+${answer.license}
 
 ##gitHub
+${answer.gitHub}
 
 ##email
+${answer.email}
 
 `;
 }
