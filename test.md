@@ -4,7 +4,7 @@ test
 
 ## Table of Contents
 
-[Instruction](##instructions)
+[Instruction]{#instructions}
 [Usage](##usage)
 [contribution](##contribution)
 [test](##test)
@@ -12,25 +12,25 @@ test
 [gitHub](##gitHub)
 [e-mail](##email)
 
-##instructions
+## instructions
 test
 
 
-##usage
+## usage
 test
 
-##contribution
+## contribution
 test
 
-##test
+## test
 test
 
-##license
+## license
 test
 
-##gitHub
+## gitHub
 test
 
-##email
+## email
 test
 

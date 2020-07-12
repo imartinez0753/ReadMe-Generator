@@ -74,7 +74,7 @@ ${answer.description}
 
 ## Table of Contents
 
-[Instruction](##instructions)
+[Instruction]{#instructions}
 [Usage](##usage)
 [contribution](##contribution)
 [test](##test)
@@ -82,26 +82,26 @@ ${answer.description}
 [gitHub](##gitHub)
 [e-mail](##email)
 
-##instructions
+## instructions
 ${answer.installation}
 
 
-##usage
+## usage
 ${answer.usage}
 
-##contribution
+## contribution
 ${answer.contribution}
 
-##test
+## test
 ${answer.test}
 
-##license
+## license
 ${answer.license}
 
-##gitHub
+## gitHub
 ${answer.gitHub}
 
-##email
+## email
 ${answer.email}
 
 `;
