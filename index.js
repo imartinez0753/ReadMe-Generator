@@ -74,13 +74,13 @@ ${answer.description}
 
 ## Table of Contents
 
-[${answer.installation}](##instructions)
-[${answer.usage}](##usage)
-[${answer.contribution}](##contribution)
-[${answer.test}](##test)
-[${answer.license}](##license)
-[${answer.gitHub}](##gitHub)
-[${answer.email}](##email)
+[Instruction](##instructions)
+[Usage](##usage)
+[contribution](##contribution)
+[test](##test)
+[license](##license)
+[gitHub](##gitHub)
+[e-mail](##email)
 
 ##instructions
 ${answer.installation}
