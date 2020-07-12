@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+const writeFileAsync = util.promisify(fs.writeFile);
+
 function promptUser() {
   return inquirer.prompt([
     {
@@ -98,7 +100,7 @@ ${answer.description}
 }
 promptUser().then(function (answer) {
   const readMe = generateReadME(answer);
-  return fs.writeFile(`${answer.project}` + ".md", readMe);
+  return writeFileAsync(`${answer.project}` + ".md", readMe);
 });
 
 // function to write README file
