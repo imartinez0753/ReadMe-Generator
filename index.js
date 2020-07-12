@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 function promptUser() {
-  return requirer.prompt([
+  return inquirer.prompt([
     {
       type: "input",
       name: "project",
@@ -98,7 +98,7 @@ ${answer.description}
 }
 promptUser().then(function (answer) {
   const readMe = generateReadME(answer);
-  return writeToFile(`${answer.project}` + ".md", readMe);
+  return fs.writeFile(`${answer.project}` + ".md", readMe);
 });
 
 // function to write README file
