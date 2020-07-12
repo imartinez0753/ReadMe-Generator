@@ -64,6 +64,22 @@ const questions = [
   "Please eneter your e-mail"
 ];
 
+const README = `
+# Title
+this will be description
+
+## Table of Contents
+
+[${}](##instructions)
+[${}](##usage)
+[${}](##contribution)
+[${}](##test)
+[${}](##license)
+[${}](##gitHub)
+[${}](##email)
+
+`;
+
 // function to write README file
 function writeToFile(fileName, data) {}
 
