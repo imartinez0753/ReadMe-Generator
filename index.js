@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const md = require("./utils/generateMarkdown.js");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -37,9 +38,10 @@ function promptUser() {
       message: questions[5]
     },
     {
-      type: "input",
+      type: "checkbox",
       name: "license",
-      message: questions[6]
+      message: questions[6],
+      choices: ["option1", "option2", "option3"]
     },
     {
       type: "input",
@@ -59,63 +61,21 @@ const questions = [
   "What is the Project Title?",
   "Please enter a description of project",
   "enter installation instructions",
-  "Please enter usage infromation",
+  "Please enter usage information",
   "Please enter contribution guidelines",
   "Please enter test instructions",
-  "Please enter license information",
+  "Please select license information",
   "Please enter Github username",
   "Please eneter your e-mail"
 ];
 
-function generateReadME(answer) {
-  return `
-# ${answer.project}
-${answer.description}
-
-## Table of Contents
-
-[Instruction](##instructions)
-[Usage](##usage)
-[contribution](##contribution)
-[test](##test)
-[license](##license)
-[gitHub](##gitHub)
-[e-mail](##email)
-
-## instructions
-${answer.installation}
-
-
-## usage
-${answer.usage}
-
-## contribution
-${answer.contribution}
-
-## test
-${answer.test}
-
-## license
-${answer.license}
-
-## gitHub
-${answer.gitHub}
-
-## email
-${answer.email}
-
-`;
-}
 promptUser().then(function (answer) {
-  const readMe = generateReadME(answer);
-  return writeFileAsync(`${answer.project}` + ".md", readMe);
+  const readMe = md(answer);
+  return writeFileAsync(`${answer.project}.md`, readMe, function (err, result) {
+    if (err) {
+      throw err;
+    } else {
+      console.log("successful creation");
+    }
+  });
 });
-
-// function to write README file
-// function writeToFile(fileName, data) {}
-
-// function to initialize program
-// function init() {}
-
-// function call to initialize program
-// init();
