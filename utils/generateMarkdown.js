@@ -1,4 +1,5 @@
 // function to generate markdown for README
+//I don't know how to dynamically create the following code for badges, I would have liked to have them created only if the user made a selection in the command line.
 function generateReadME(answer) {
   return `
   [![Generic badge](https://img.shields.io/badge/<license>-<${answer.license[0]}>-<COLOR>.svg)](https://shields.io/)
@@ -14,7 +15,6 @@ ${answer.description}
 [Usage](#usage)
 [contribution](#contribution)
 [test](#test)
-[license](#license)
 [gitHub](#question)
 [e-mail](#e-mail)
 
