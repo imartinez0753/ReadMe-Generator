@@ -15,8 +15,8 @@ ${answer.description}
 [Usage](#usage)
 [contribution](#contribution)
 [test](#test)
-[gitHub](#question)
-[e-mail](#e-mail)
+[gitHub](#questions)
+[e-mail](#questions)
 
 ## Instructions 
 ${answer.installation}
